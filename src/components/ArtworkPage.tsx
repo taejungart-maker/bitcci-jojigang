@@ -83,7 +83,7 @@ export default function ArtworkPage({ artwork }: ArtworkPageProps) {
       >
         {/* 제목 (인용구 스타일 - Noto Serif italic, 강조) */}
         <p
-          className="text-[20px] md:text-[23px] leading-snug mb-2 whitespace-pre-line tracking-wide"
+          className="text-[20px] md:text-[23px] leading-snug mb-1 whitespace-pre-line tracking-wide"
           style={{
             fontFamily: "'Noto Serif', 'Noto Sans KR', serif",
             fontStyle: 'italic',
@@ -92,6 +92,19 @@ export default function ArtworkPage({ artwork }: ArtworkPageProps) {
         >
           {artwork.title}
         </p>
+        {/* 중문 제목 병기 (글로벌 작가용) */}
+        {artwork.titleCn && (
+          <p
+            className="text-[14px] md:text-[15px] tracking-[0.15em] mb-2"
+            style={{
+              fontFamily: "'Noto Serif KR', serif",
+              color: textSecondary,
+              opacity: 0.7,
+            }}
+          >
+            {artwork.titleCn}
+          </p>
+        )}
         {/* 보라 라인 (인용구 페이지와 통일) */}
         <div
           className="w-8 h-[1px] mx-auto mb-2"

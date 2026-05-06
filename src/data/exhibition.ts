@@ -2,6 +2,8 @@ export interface Artwork {
   id: number;
   artist: string;
   title: string;
+  /** 중문 제목 (옵션) — 작품 페이지에 한·중 병기 */
+  titleCn?: string;
   material: string;
   size: string;
   year: string;
@@ -69,28 +71,28 @@ export const exhibition: ExhibitionData = {
   ],
 
   artworks: [
-    { id: 1,  artist: "조지강", title: "작품 1",  material: "Mixed media", size: "—", year: "—", image: "artworks/1.jpg",  description: "" },
-    { id: 2,  artist: "조지강", title: "작품 2",  material: "Mixed media", size: "—", year: "—", image: "artworks/2.jpg",  description: "" },
-    { id: 3,  artist: "조지강", title: "작품 3",  material: "Mixed media", size: "—", year: "—", image: "artworks/3.jpg",  description: "" },
-    { id: 4,  artist: "조지강", title: "작품 4",  material: "Mixed media", size: "—", year: "—", image: "artworks/4.jpg",  description: "" },
-    { id: 5,  artist: "조지강", title: "작품 5",  material: "Mixed media", size: "—", year: "—", image: "artworks/5.jpg",  description: "" },
-    { id: 6,  artist: "조지강", title: "작품 6",  material: "Mixed media", size: "—", year: "—", image: "artworks/6.jpg",  description: "" },
-    { id: 7,  artist: "조지강", title: "작품 7",  material: "Mixed media", size: "—", year: "—", image: "artworks/7.jpg",  description: "" },
-    { id: 8,  artist: "조지강", title: "작품 8",  material: "Mixed media", size: "—", year: "—", image: "artworks/8.jpg",  description: "" },
-    { id: 9,  artist: "조지강", title: "작품 9",  material: "Mixed media", size: "—", year: "—", image: "artworks/9.jpg",  description: "" },
-    { id: 10, artist: "조지강", title: "작품 10", material: "Mixed media", size: "—", year: "—", image: "artworks/10.jpg", description: "" },
-    { id: 11, artist: "조지강", title: "작품 11", material: "Mixed media", size: "—", year: "—", image: "artworks/11.jpg", description: "" },
-    { id: 12, artist: "조지강", title: "작품 12 — 장인", material: "Oil on canvas", size: "—", year: "—", image: "artworks/12.jpg", description: "" },
-    { id: 13, artist: "조지강", title: "작품 13", material: "Mixed media", size: "—", year: "—", image: "artworks/13.jpg", description: "" },
-    { id: 14, artist: "조지강", title: "작품 14", material: "Mixed media", size: "—", year: "—", image: "artworks/14.jpg", description: "" },
-    { id: 15, artist: "조지강", title: "작품 15", material: "Mixed media", size: "—", year: "—", image: "artworks/15.jpg", description: "" },
-    { id: 16, artist: "조지강", title: "작품 16", material: "Mixed media", size: "—", year: "—", image: "artworks/16.jpg", description: "" },
-    { id: 17, artist: "조지강", title: "작품 17", material: "Mixed media", size: "—", year: "—", image: "artworks/17.jpg", description: "" },
-    { id: 18, artist: "조지강", title: "작품 18", material: "Mixed media", size: "—", year: "—", image: "artworks/18.jpg", description: "" },
-    { id: 19, artist: "조지강", title: "작품 19", material: "Mixed media", size: "—", year: "—", image: "artworks/19.jpg", description: "" },
-    { id: 20, artist: "조지강", title: "작품 20", material: "Mixed media", size: "—", year: "—", image: "artworks/20.jpg", description: "" },
-    { id: 21, artist: "조지강", title: "작품 21", material: "Mixed media", size: "—", year: "—", image: "artworks/21.jpg", description: "" },
-    { id: 22, artist: "조지강", title: "작품 22", material: "Mixed media", size: "—", year: "—", image: "artworks/22.jpg", description: "" },
-    { id: 23, artist: "조지강", title: "작품 23", material: "Mixed media", size: "—", year: "—", image: "artworks/23.jpg", description: "" }
+    { id: 1,  artist: "조지강", title: "보초병",          titleCn: "哨兵",        material: "Mixed media", size: "30×50",   year: "2017", image: "artworks/1.jpg",  description: "" },
+    { id: 2,  artist: "조지강", title: "족장",            titleCn: "族长",        material: "Mixed media", size: "40×40",   year: "2017", image: "artworks/2.jpg",  description: "" },
+    { id: 3,  artist: "조지강", title: "가족",            titleCn: "家族",        material: "Mixed media", size: "40×40",   year: "2018", image: "artworks/3.jpg",  description: "" },
+    { id: 4,  artist: "조지강", title: "청백리",          titleCn: "清官",        material: "Mixed media", size: "30×60",   year: "2018", image: "artworks/4.jpg",  description: "" },
+    { id: 5,  artist: "조지강", title: "메아리",          titleCn: "回响",        material: "Mixed media", size: "50×100",  year: "2019", image: "artworks/5.jpg",  description: "" },
+    { id: 6,  artist: "조지강", title: "즐거움 · 예언",    titleCn: "乐. 预言",    material: "Mixed media", size: "320×1050",year: "2018", image: "artworks/6.jpg",  description: "" },
+    { id: 7,  artist: "조지강", title: "즐거움 · 영혼의 대화", titleCn: "乐. 灵的对话", material: "Mixed media", size: "320×350", year: "2018", image: "artworks/7.jpg",  description: "" },
+    { id: 8,  artist: "조지강", title: "소년과 소",       titleCn: "少年与牛",     material: "Mixed media", size: "150×150", year: "2001", image: "artworks/8.jpg",  description: "" },
+    { id: 9,  artist: "조지강", title: "광부",            titleCn: "矿工",        material: "Mixed media", size: "150×150", year: "2018", image: "artworks/9.jpg",  description: "" },
+    { id: 10, artist: "조지강", title: "가로등",          titleCn: "路灯",        material: "Mixed media", size: "150×150", year: "2015", image: "artworks/10.jpg", description: "" },
+    { id: 11, artist: "조지강", title: "목공",            titleCn: "木工",        material: "Mixed media", size: "150×150", year: "2015", image: "artworks/11.jpg", description: "" },
+    { id: 12, artist: "조지강", title: "목공방",          titleCn: "木工房",      material: "Oil on canvas",size: "198×200", year: "2018", image: "artworks/12.jpg", description: "" },
+    { id: 13, artist: "조지강", title: "마굿간의 사랑",   titleCn: "马厩里的爱",   material: "Mixed media", size: "150×150", year: "2016", image: "artworks/13.jpg", description: "" },
+    { id: 14, artist: "조지강", title: "마굿간의 사랑",   titleCn: "马厩里的爱",   material: "Mixed media", size: "150×150", year: "2016", image: "artworks/14.jpg", description: "" },
+    { id: 15, artist: "조지강", title: "사신의 축복",     titleCn: "死神的祝",     material: "Mixed media", size: "150×150", year: "2016", image: "artworks/15.jpg", description: "" },
+    { id: 16, artist: "조지강", title: "밤길의 소년",     titleCn: "走夜路的少年", material: "Mixed media", size: "150×150", year: "2015", image: "artworks/16.jpg", description: "" },
+    { id: 17, artist: "조지강", title: "중년남자",        titleCn: "中年男子",     material: "Mixed media", size: "40×50",   year: "2005", image: "artworks/17.jpg", description: "" },
+    { id: 18, artist: "조지강", title: "고양이와 물고기", titleCn: "猫和鱼",       material: "Mixed media", size: "150×150", year: "2006", image: "artworks/18.jpg", description: "" },
+    { id: 19, artist: "조지강", title: "고양이와 물고기", titleCn: "猫和鱼",       material: "Mixed media", size: "150×150", year: "2007", image: "artworks/19.jpg", description: "" },
+    { id: 20, artist: "조지강", title: "고양이와 물고기", titleCn: "猫和鱼",       material: "Mixed media", size: "120×120", year: "2006", image: "artworks/20.jpg", description: "" },
+    { id: 21, artist: "조지강", title: "고양이와 물고기", titleCn: "猫和鱼",       material: "Mixed media", size: "120×120", year: "2006", image: "artworks/21.jpg", description: "" },
+    { id: 22, artist: "조지강", title: "해바라기",        titleCn: "向日葵",       material: "Mixed media", size: "150×150", year: "2007", image: "artworks/22.jpg", description: "" },
+    { id: 23, artist: "조지강", title: "천문",            titleCn: "天问",        material: "Mixed media", size: "320×960", year: "2007", image: "artworks/23.jpg", description: "" }
   ]
 };
