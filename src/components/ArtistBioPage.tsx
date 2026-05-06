@@ -143,8 +143,8 @@ export default function ArtistBioPage() {
 
   return (
     <div className="w-full h-full bg-[#f5f1e6] relative overflow-hidden">
-      {/* 언어 토글 */}
-      <div className="absolute top-5 right-5 z-30 flex gap-1.5 bg-white/80 backdrop-blur-sm rounded-full px-1.5 py-1 shadow-sm">
+      {/* 언어 토글 — BGM 아이콘(우상단)과 겹치지 않게 좌상단 배치 */}
+      <div className="absolute top-5 left-5 z-30 flex gap-1.5 bg-white/80 backdrop-blur-sm rounded-full px-1.5 py-1 shadow-sm">
         {langButtons.map((b) => (
           <button
             key={b.key}
