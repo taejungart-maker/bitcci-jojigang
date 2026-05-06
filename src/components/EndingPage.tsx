@@ -8,10 +8,10 @@ import { motion } from 'motion/react';
 export default function EndingPage() {
   return (
     <div className="w-full h-full relative overflow-hidden bg-[#f5f1e6]">
-      {/* 배경 — 작가 작업 사진 (서서히 페이드인) */}
+      {/* 배경 — 작가 작업 사진 (또렷하게 — 작가의 인상이 남도록) */}
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: 0.18 }}
+        animate={{ opacity: 0.65 }}
         transition={{ duration: 3, ease: 'easeOut' }}
         className="absolute inset-0"
       >
@@ -19,15 +19,15 @@ export default function EndingPage() {
           src={`${import.meta.env.BASE_URL}bio/artist_drawing.jpg`}
           alt="작가 수묵 작업"
           className="w-full h-full object-cover"
-          style={{ filter: 'brightness(1.05) saturate(0.85)' }}
+          style={{ filter: 'brightness(1.0) saturate(0.9) contrast(1.05)' }}
         />
       </motion.div>
-      {/* 한지 오버레이 */}
+      {/* 한지 오버레이 — 텍스트 영역만 가독성 확보 (가운데 부드럽게, 가장자리는 작가 사진 살림) */}
       <div
         className="absolute inset-0"
         style={{
           background:
-            'radial-gradient(ellipse at center, rgba(245,241,230,0.5) 0%, rgba(245,241,230,0.95) 80%)',
+            'radial-gradient(ellipse 70% 65% at 50% 50%, rgba(245,241,230,0.78) 0%, rgba(245,241,230,0.55) 50%, rgba(245,241,230,0.2) 100%)',
         }}
       />
 
