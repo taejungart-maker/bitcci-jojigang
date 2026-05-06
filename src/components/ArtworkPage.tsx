@@ -110,27 +110,19 @@ export default function ArtworkPage({ artwork }: ArtworkPageProps) {
           className="w-8 h-[1px] mx-auto mb-2"
           style={{ backgroundColor: accentColor, opacity: 0.5 }}
         />
-        {/* 재료 (+크기) — 한 줄, 비어있으면 생략 */}
-        {(() => {
-          const hasMat = artwork.material && artwork.material !== '—';
-          const hasSize = artwork.size && artwork.size !== '—';
-          if (!hasMat && !hasSize) return null;
-          const text = [hasMat ? artwork.material : null, hasSize ? artwork.size : null]
-            .filter(Boolean)
-            .join(' · ');
-          return (
-            <p
-              className="text-[13.5px] leading-relaxed tracking-wider"
-              style={{
-                fontFamily: "'Noto Sans KR', sans-serif",
-                color: textSecondary,
-                opacity: 0.75,
-              }}
-            >
-              {text}
-            </p>
-          );
-        })()}
+        {/* 크기만 표시 (material 생략 — 작가 의도) */}
+        {artwork.size && artwork.size !== '—' && (
+          <p
+            className="text-[13.5px] leading-relaxed tracking-wider"
+            style={{
+              fontFamily: "'Noto Sans KR', sans-serif",
+              color: textSecondary,
+              opacity: 0.75,
+            }}
+          >
+            {artwork.size}
+          </p>
+        )}
         {/* 연도 — 별도 줄, 숫자면 '년' 붙임 */}
         {artwork.year && artwork.year !== '—' && (
           <p
