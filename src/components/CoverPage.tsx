@@ -36,13 +36,7 @@ export default function CoverPage() {
         className="absolute top-10 left-10 md:top-14 md:left-14 z-10"
       >
         <div
-          className="text-[#5a4f42] text-[13px] tracking-[0.5em]"
-          style={{ fontFamily: "'Noto Sans KR', sans-serif" }}
-        >
-          太定의 아트노트
-        </div>
-        <div
-          className="text-[#1a1a1a] text-3xl md:text-4xl font-light tracking-[0.3em] mt-3"
+          className="text-[#1a1a1a] text-3xl md:text-4xl font-light tracking-[0.3em]"
           style={{ fontFamily: "'Noto Serif KR', serif" }}
         >
           趙志剛
